@@ -1,0 +1,16 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - "v*"
+  create:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  do-release:
+    uses: djzager/release-tools/.github/workflows/create-release.yml@release-workflow
